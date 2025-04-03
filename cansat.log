@@ -1,0 +1,24 @@
+2025-04-04 01:37:42 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-04 01:37:42 | INFO     | Cargando datos desde: datos.csv
+2025-04-04 01:37:42 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-04 01:37:45 | INFO     | Gráficos generados exitosamente
+2025-04-04 01:37:46 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-04 01:37:46 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-04 01:37:46 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-04 01:37:46 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-04 01:54:12 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-04 01:54:12 | INFO     | Cargando datos desde: datos.csv
+2025-04-04 01:54:12 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-04 01:54:12 | INFO     | Gráficos generados exitosamente
+2025-04-04 01:54:12 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-04 01:54:12 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-04 01:54:12 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-04 01:54:12 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-04 01:54:41 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-04 01:54:41 | INFO     | Cargando datos desde: datos.csv
+2025-04-04 01:54:41 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-04 01:54:41 | INFO     | Gráficos generados exitosamente
+2025-04-04 01:54:41 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-04 01:54:41 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-04 01:54:41 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-04 01:54:41 | INFO     | ==== PROCESO COMPLETADO ====
