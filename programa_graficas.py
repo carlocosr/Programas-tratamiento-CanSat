@@ -252,7 +252,7 @@ def leer_datos_csv(archivo_csv):
     with open(archivo_csv, 'r') as file:
         reader = csv.reader(file)
         for row in reader:
-            if row[0] != "JADA":
+            if row[0] == "JADA":
                 datos_gps.append(row)
     return datos_gps
 
