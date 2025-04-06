@@ -10,6 +10,7 @@ Licencia: GPL-3.0
 # ======================
 import os
 import sys
+import csv
 import logging
 import pandas as pd
 import plotly.express as px
@@ -229,7 +230,7 @@ def generar_graficas_interactivas(df: pd.DataFrame) -> dict:
         figuras['panel_sensores'] = fig3
 
         # Gráfico 4: Matriz de correlación
-        variables = ['Temperature', 'Pressure', 'Altitude', 'AccX', 'AccY', 'AccZ']
+        variables = ['Temperature', 'Pressure', 'Altitude', 'AccX', 'AccY', 'AccZ', 'GyroX', 'GyroY', 'GyroZ', 'GPS_Lat', 'GPS_Lon']
         corr_matrix = df[variables].corr()
         fig4 = px.imshow(corr_matrix,
                          text_auto=True,
@@ -313,9 +314,8 @@ def generar_graficas_interactivas(df: pd.DataFrame) -> dict:
         raise
 
 
-
 # ======================
-# Función principal
+# Módulo de añadir logotipo
 # ======================
 def insertar_encabezado_logo(html_path: str, logo_svg: str, nombre_equipo: str):
     """
@@ -337,6 +337,104 @@ def insertar_encabezado_logo(html_path: str, logo_svg: str, nombre_equipo: str):
 
     print(f"✅ Logotipo y encabezado insertados en {html_path}")
 
+
+# ========================================
+# Módulo de generación KML
+# ========================================
+
+def crear_kml_mejorado(datos_gps, archivo_kml):
+    """
+    Crea un archivo KML con trayectoria continua y puntos destacados
+    
+    Parámetros:
+        datos_gps (list): Lista de tuplas con datos GPS
+        archivo_kml (str): Ruta de salida para el archivo KML
+    """
+    kml_template = '''<?xml version="1.0" encoding="UTF-8"?>
+    <kml xmlns="http://www.opengis.net/kml/2.2">
+    <Document>
+        <name>Trayectoria CanSat</name>
+        <description>Vuelo completo con datos de sensores</description>
+        
+        <!-- Estilo para la ruta -->
+        <Style id="ruta_estilo">
+            <LineStyle>
+                <color>ff00aaff</color>
+                <width>4</width>
+            </LineStyle>
+        </Style>
+        
+        <!-- Trayectoria completa -->
+        <Placemark>
+            <name>Ruta Completa</name>
+            <styleUrl>#ruta_estilo</styleUrl>
+            <LineString>
+                <extrude>1</extrude>
+                <altitudeMode>absolute</altitudeMode>
+                <coordinates>
+                {coordenadas}
+                </coordinates>
+            </LineString>
+        </Placemark>
+        
+        <!-- Puntos de muestreo -->
+        {puntos}
+    </Document>
+    </kml>'''
+    
+    # Generar coordenadas y puntos
+    coordenadas = []
+    puntos_kml = ""
+    
+    for i, row in enumerate(datos_gps):
+        try:
+            lat = float(row[11])  # Índices ajustados según tu CSV
+            lon = float(row[12])
+            alt = float(row[4])
+            
+            coordenadas.append(f"{lon},{lat},{alt}")
+            
+            puntos_kml += f'''
+            <Placemark>
+                <name>Muestra {i}</name>
+                <description>
+                    Altitud: {alt:.2f} m
+                    Presión: {float(row[3]):.2f} Pa
+                    Temp: {float(row[2]):.2f} °C
+                </description>
+                <Point>
+                    <coordinates>{lon},{lat},{alt}</coordinates>
+                </Point>
+            </Placemark>'''
+            
+        except (ValueError, IndexError):
+            continue
+    
+    kml_final = kml_template.format(
+        coordenadas="\n".join(coordenadas),
+        puntos=puntos_kml
+    )
+    
+    with open(archivo_kml, 'w', encoding='utf-8') as f:
+        f.write(kml_final)
+
+# ========================================
+# Módulo de carga de datos
+# ========================================
+
+def leer_datos_csv(archivo_csv):
+    datos_gps = []
+    with open(archivo_csv, 'r') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            if row[0] == "JADA":
+                datos_gps.append(row)
+    return datos_gps
+
+# ========================================
+# Función principal
+# ========================================
+
 def main():
     """Punto de entrada principal del programa"""
     
@@ -347,6 +445,7 @@ def main():
         
         # 1. Carga de datos
         df = cargar_datos('datos.csv')
+        archivo_kml = "ruta_cansat.kml"
         
         # 2. Generación de gráficos
         figuras = generar_graficas_interactivas(df)
@@ -363,7 +462,12 @@ def main():
                 nombre_equipo="JADA CanSat Team"
             )
             logger.info(f"Gráfico guardado: {ruta_html}")
-            
+        
+        # Generación KML
+        datos_gps = leer_datos_csv('datos.csv')
+        crear_kml_mejorado(datos_gps, archivo_kml)
+        print(f"KML generado exitosamente: {archivo_kml}")
+
         logger.info("==== PROCESO COMPLETADO ====")
         
     except FileNotFoundError as e:

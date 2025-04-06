@@ -358,3 +358,64 @@ ValueError: Value of 'x' is not the name of a column in 'data_frame'. Expected o
 2025-04-06 03:27:32 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
 2025-04-06 03:27:33 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
 2025-04-06 03:27:33 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 03:36:57 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 03:36:57 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 03:36:57 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 03:36:59 | INFO     | Gráficos generados exitosamente
+2025-04-06 03:36:59 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 03:37:00 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 03:37:00 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 03:37:01 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 03:37:02 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 03:37:02 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 03:37:03 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 03:37:03 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 03:43:43 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 03:43:43 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 03:43:43 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 03:43:44 | INFO     | Gráficos generados exitosamente
+2025-04-06 03:43:45 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 03:43:46 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 03:43:46 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 03:43:47 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 03:43:47 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 03:43:48 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 03:43:49 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 03:43:49 | CRITICAL | Error no controlado: name 'archivo_csv' is not defined
+Traceback (most recent call last):
+  File "c:\Users\Carlos\Documents\GitHub\Programas tratamiento CanSat\prueba.py", line 466, in main
+    datos_gps = leer_datos_csv(archivo_csv)
+                               ^^^^^^^^^^^
+NameError: name 'archivo_csv' is not defined. Did you mean: 'archivo_kml'?
+2025-04-06 03:44:14 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 03:44:14 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 03:44:14 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 03:44:15 | INFO     | Gráficos generados exitosamente
+2025-04-06 03:44:16 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 03:44:16 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 03:44:17 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 03:44:17 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 03:44:18 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 03:44:18 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 03:44:19 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 03:44:19 | CRITICAL | Error no controlado: name 'csv' is not defined
+Traceback (most recent call last):
+  File "c:\Users\Carlos\Documents\GitHub\Programas tratamiento CanSat\prueba.py", line 466, in main
+    datos_gps = leer_datos_csv('datos.csv')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Carlos\Documents\GitHub\Programas tratamiento CanSat\prueba.py", line 427, in leer_datos_csv
+    reader = csv.reader(file)
+             ^^^
+NameError: name 'csv' is not defined. Did you forget to import 'csv'
+2025-04-06 03:46:01 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 03:46:01 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 03:46:01 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 03:46:02 | INFO     | Gráficos generados exitosamente
+2025-04-06 03:46:03 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 03:46:03 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 03:46:04 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 03:46:05 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 03:46:05 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 03:46:06 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 03:46:06 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 03:46:06 | INFO     | ==== PROCESO COMPLETADO ====
