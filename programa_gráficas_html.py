@@ -60,6 +60,7 @@ def configurar_logging():
     
     return logger
 
+
 # ======================
 # Módulo de datos
 # ======================
@@ -152,96 +153,82 @@ def generar_graficas_interactivas(df: pd.DataFrame) -> dict:
     figuras = {}
     
     try:
-        # --------------------------------------------------
-        # Gráfico 1: Evolución temporal de altitud y presión
-        # --------------------------------------------------
+        # Gráfico 1: Altitud y presión
         fig1 = make_subplots(specs=[[{"secondary_y": True}]])
-        
-        # Altitud
-        fig1.add_trace(
-            px.line(df, x='Index', y='Altitude').data[0],
-            secondary_y=False
-        )
-        
-        # Presión
-        fig1.add_trace(
-            px.line(df, x='Index', y='Pressure', color_discrete_sequence=['red']).data[0],
-            secondary_y=True
-        )
-        
-        fig1.update_layout(
-            title='Dual Axis: Altitud y Presión vs Tiempo',
-            xaxis_title='Índice de Muestreo',
-            yaxis_title='Altitud (m)',
-            yaxis2_title='Presión (hPa)',
-            hovermode='x unified'
-        )
+        fig1.add_trace(px.line(df, x='Index', y='Altitude').data[0], secondary_y=False)
+        fig1.add_trace(px.line(df, x='Index', y='Pressure', color_discrete_sequence=['red']).data[0], secondary_y=True)
+        fig1.update_layout(title='Dual Axis: Altitud y Presión vs Tiempo', xaxis_title='Índice de Muestreo',
+                           yaxis_title='Altitud (m)', yaxis2_title='Presión (hPa)', hovermode='x unified')
         figuras['altitud_presion'] = fig1
-        
-        # --------------------------------------------------
-        # Gráfico 2: Mapa 3D de trayectoria con sensores con imagen de fondo  
-        # --------------------------------------------------
-        fig2 = px.scatter_3d(
-            df,
-            x='GPS_Lon',
-            y='GPS_Lat',
-            z='Altitude',
-            color='Temperature',
-            hover_data=['Pressure', 'Time'],
-            title='Trayectoria 3D del Vuelo',
-            labels={
-                'GPS_Lon': 'Longitud',
-                'GPS_Lat': 'Latitud',
-                'Altitude': 'Altitud (m)',
-                'Temperature': 'Temp (°C)'
-            }
-        )
-        
+
+        # Gráfico 2: Trayectoria 3D
+        fig2 = px.scatter_3d(df, x='GPS_Lon', y='GPS_Lat', z='Altitude', color='Temperature',
+                             hover_data=['Pressure', 'Time'],
+                             title='Trayectoria 3D del Vuelo',
+                             labels={'GPS_Lon': 'Longitud', 'GPS_Lat': 'Latitud',
+                                     'Altitude': 'Altitud (m)', 'Temperature': 'Temp (°C)'})
         figuras['trayectoria_3d'] = fig2
-        
-        # --------------------------------------------------
-        # Gráfico 3: Panel de diagnóstico de sensores
-        # --------------------------------------------------
-        fig3 = make_subplots(
-            rows=2, cols=2,
-            subplot_titles=(
-                'Acelerómetro X',
-                'Acelerómetro Y',
-                'Acelerómetro Z',
-                'Distribución de Temperaturas'
-            )
-        )
-        
-        # Acelerómetros
+
+        # Gráfico 3: Panel sensores
+        fig3 = make_subplots(rows=2, cols=2,
+                             subplot_titles=('Acelerómetro X', 'Acelerómetro Y', 'Acelerómetro Z', 'Distribución de Temperaturas'))
         for i, col in enumerate(['AccX', 'AccY', 'AccZ'], 1):
-            fig3.add_trace(
-                px.line(df, x='Index', y=col).data[0],
-                row=(i//2)+1, col=(i%2)+1
-            )
-            
-        # Histograma de temperatura
-        fig3.add_trace(
-            px.histogram(df, x='Temperature', nbins=20).data[0],
-            row=2, col=2
-        )
-        
-        fig3.update_layout(
-            title_text='Panel de Diagnóstico de Sensores',
-            height=800,
-            showlegend=False
-        )
+            fig3.add_trace(px.line(df, x='Index', y=col).data[0], row=(i//2)+1, col=(i%2)+1)
+        fig3.add_trace(px.histogram(df, x='Temperature', nbins=20).data[0], row=2, col=2)
+        fig3.update_layout(title_text='Panel de Diagnóstico de Sensores', height=800, showlegend=False)
         figuras['panel_sensores'] = fig3
-        
+
+        # Gráfico 4: Matriz de correlación
+        variables = ['Temperature', 'Pressure', 'Altitude', 'AccX', 'AccY', 'AccZ']
+        corr_matrix = df[variables].corr()
+        fig4 = px.imshow(corr_matrix,
+                         text_auto=True,
+                         color_continuous_scale='RdBu',
+                         title="Matriz de Correlación de Variables Clave")
+        figuras['matriz_correlacion'] = fig4
+
+        # Gráfico 5: Diagramas de dispersión
+        fig5a = px.scatter(df, x='Altitude', y='Pressure',
+                           trendline='ols', title="Altitud vs Presión")
+        fig5b = px.scatter(df, x='Altitude', y='Temperature',
+                           trendline='ols', title="Altitud vs Temperatura")
+        fig5c = px.scatter(df, x='Temperature', y='Pressure',
+                           trendline='ols', title="Temperatura vs Presión")
+        figuras['scatter_altitud_presion'] = fig5a
+        figuras['scatter_altitud_temp'] = fig5b
+        figuras['scatter_temp_presion'] = fig5c
+
         logger.info("Gráficos generados exitosamente")
         return figuras
-    
+
     except Exception as e:
         logger.error(f"Error generando gráficos: {str(e)}", exc_info=True)
         raise
 
+
 # ======================
 # Función principal
 # ======================
+def insertar_encabezado_logo(html_path: str, logo_svg: str, nombre_equipo: str):
+    """
+    Inserta un encabezado con logotipo SVG y el nombre del equipo al principio del HTML generado.
+    """
+    with open(html_path, 'r', encoding='utf-8') as f:
+        contenido = f.read()
+
+    encabezado = f"""
+    <header style="display:flex;align-items:center;border-bottom:2px solid #ccc;padding-bottom:10px;margin-bottom:20px;align-content: center;justify-content: center;">
+        <img src="{logo_svg}" alt="Logo {nombre_equipo}" style="height:80px;margin-right:20px;">
+    </header>
+    """
+
+    contenido_modificado = contenido.replace("<body>", f"<body>\n{encabezado}")
+
+    with open(html_path, 'w', encoding='utf-8') as f:
+        f.write(contenido_modificado)
+
+    print(f"✅ Logotipo y encabezado insertados en {html_path}")
+
 def main():
     """Punto de entrada principal del programa"""
     
@@ -260,8 +247,14 @@ def main():
         os.makedirs('graficos', exist_ok=True)
         
         for nombre, figura in figuras.items():
-            figura.write_html(f"graficos/{nombre}.html")
-            logger.info(f"Gráfico guardado: graficos/{nombre}.html")
+            ruta_html = f"graficos/{nombre}.html"
+            figura.write_html(ruta_html)
+            insertar_encabezado_logo(
+                html_path=ruta_html,
+                logo_svg="JADA CANSAT TEAM.svg",
+                nombre_equipo="JADA CanSat Team"
+            )
+            logger.info(f"Gráfico guardado: {ruta_html}")
             
         logger.info("==== PROCESO COMPLETADO ====")
         
@@ -275,9 +268,5 @@ def main():
         logger.critical(f"Error no controlado: {str(e)}", exc_info=True)
         sys.exit(1)
 
-# ======================
-# Punto de entrada
-# ======================
 if __name__ == "__main__":
     main()
-

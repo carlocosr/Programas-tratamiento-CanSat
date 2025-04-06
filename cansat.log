@@ -118,3 +118,243 @@
 2025-04-05 00:22:13 | INFO     | Gráficos generados exitosamente
 2025-04-05 00:22:13 | INFO     | Gráficos generados exitosamente
 2025-04-05 00:22:13 | INFO     | Gráficos generados exitosamente
+2025-04-06 02:23:45 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 02:23:45 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 02:23:45 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 02:23:48 | ERROR    | Error generando gráficos: No module named 'statsmodels'
+Traceback (most recent call last):
+  File "c:\Users\Carlos\Documents\GitHub\Programas tratamiento CanSat\programa_gráficas_html.py", line 190, in generar_graficas_interactivas
+    fig5a = px.scatter(df, x='Altitude', y='Pressure',
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\_core.py", line 2670, in make_figure
+    patch, fit_results = make_trace_kwargs(
+                         ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\_core.py", line 430, in make_trace_kwargs
+    y_out, hover_header, fit_results = trendline_function(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\trendline_functions\__init__.py", line 42, in ols
+    import statsmodels.api as sm
+ModuleNotFoundError: No module named 'statsmodels'
+2025-04-06 02:23:48 | CRITICAL | Error no controlado: No module named 'statsmodels'
+Traceback (most recent call last):
+  File "c:\Users\Carlos\Documents\GitHub\Programas tratamiento CanSat\programa_gráficas_html.py", line 223, in main
+    figuras = generar_graficas_interactivas(df)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Carlos\Documents\GitHub\Programas tratamiento CanSat\programa_gráficas_html.py", line 190, in generar_graficas_interactivas
+    fig5a = px.scatter(df, x='Altitude', y='Pressure',
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\_core.py", line 2670, in make_figure
+    patch, fit_results = make_trace_kwargs(
+                         ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\_core.py", line 430, in make_trace_kwargs
+    y_out, hover_header, fit_results = trendline_function(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\trendline_functions\__init__.py", line 42, in ols
+    import statsmodels.api as sm
+ModuleNotFoundError: No module named 'statsmodels'
+2025-04-06 02:25:35 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 02:25:35 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 02:25:35 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 02:25:35 | ERROR    | Error generando gráficos: No module named 'statsmodels'
+Traceback (most recent call last):
+  File "c:\Users\Carlos\Documents\GitHub\Programas tratamiento CanSat\prueba.py", line 190, in generar_graficas_interactivas
+    fig5a = px.scatter(df, x='Altitude', y='Pressure',
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\_core.py", line 2670, in make_figure
+    patch, fit_results = make_trace_kwargs(
+                         ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\_core.py", line 430, in make_trace_kwargs
+    y_out, hover_header, fit_results = trendline_function(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\trendline_functions\__init__.py", line 42, in ols
+    import statsmodels.api as sm
+ModuleNotFoundError: No module named 'statsmodels'
+2025-04-06 02:25:35 | CRITICAL | Error no controlado: No module named 'statsmodels'
+Traceback (most recent call last):
+  File "c:\Users\Carlos\Documents\GitHub\Programas tratamiento CanSat\prueba.py", line 223, in main
+    figuras = generar_graficas_interactivas(df)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Carlos\Documents\GitHub\Programas tratamiento CanSat\prueba.py", line 190, in generar_graficas_interactivas
+    fig5a = px.scatter(df, x='Altitude', y='Pressure',
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\_core.py", line 2670, in make_figure
+    patch, fit_results = make_trace_kwargs(
+                         ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\_core.py", line 430, in make_trace_kwargs
+    y_out, hover_header, fit_results = trendline_function(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\trendline_functions\__init__.py", line 42, in ols
+    import statsmodels.api as sm
+ModuleNotFoundError: No module named 'statsmodels'
+2025-04-06 02:26:58 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 02:26:58 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 02:26:58 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 02:27:06 | INFO     | Gráficos generados exitosamente
+2025-04-06 02:27:07 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 02:27:07 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 02:27:07 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 02:27:07 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 02:27:07 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 02:27:07 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 02:27:07 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 02:27:07 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 02:29:42 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 02:29:42 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 02:29:42 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 02:29:44 | ERROR    | Error generando gráficos: Value of 'x' is not the name of a column in 'data_frame'. Expected one of ['Tag', 'Index', 'Temperature', 'Pressure', 'Altitude', 'AccX', 'AccY', 'AccZ', 'GyroX', 'GyroY', 'GyroZ', 'GPS_Lat', 'GPS_Lon', 'Date', 'Time'] but received: Altitud
+Traceback (most recent call last):
+  File "c:\Users\Carlos\Documents\GitHub\Programas tratamiento CanSat\prueba.py", line 192, in generar_graficas_interactivas
+    fig5b = px.scatter(df, x='Altitud', y='Temperatura',
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\_core.py", line 2479, in make_figure
+    args = build_dataframe(args, constructor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\_core.py", line 1727, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\_core.py", line 1328, in process_args_into_dataframe
+    raise ValueError(err_msg)
+ValueError: Value of 'x' is not the name of a column in 'data_frame'. Expected one of ['Tag', 'Index', 'Temperature', 'Pressure', 'Altitude', 'AccX', 'AccY', 'AccZ', 'GyroX', 'GyroY', 'GyroZ', 'GPS_Lat', 'GPS_Lon', 'Date', 'Time'] but received: Altitud
+2025-04-06 02:29:44 | CRITICAL | Error no controlado: Value of 'x' is not the name of a column in 'data_frame'. Expected one of ['Tag', 'Index', 'Temperature', 'Pressure', 'Altitude', 'AccX', 'AccY', 'AccZ', 'GyroX', 'GyroY', 'GyroZ', 'GPS_Lat', 'GPS_Lon', 'Date', 'Time'] but received: Altitud
+Traceback (most recent call last):
+  File "c:\Users\Carlos\Documents\GitHub\Programas tratamiento CanSat\prueba.py", line 223, in main
+    figuras = generar_graficas_interactivas(df)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Carlos\Documents\GitHub\Programas tratamiento CanSat\prueba.py", line 192, in generar_graficas_interactivas
+    fig5b = px.scatter(df, x='Altitud', y='Temperatura',
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\_core.py", line 2479, in make_figure
+    args = build_dataframe(args, constructor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\_core.py", line 1727, in build_dataframe
+    df_output, wide_id_vars = process_args_into_dataframe(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Carlos\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\plotly\express\_core.py", line 1328, in process_args_into_dataframe
+    raise ValueError(err_msg)
+ValueError: Value of 'x' is not the name of a column in 'data_frame'. Expected one of ['Tag', 'Index', 'Temperature', 'Pressure', 'Altitude', 'AccX', 'AccY', 'AccZ', 'GyroX', 'GyroY', 'GyroZ', 'GPS_Lat', 'GPS_Lon', 'Date', 'Time'] but received: Altitud
+2025-04-06 02:31:34 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 02:31:34 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 02:31:34 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 02:31:35 | INFO     | Gráficos generados exitosamente
+2025-04-06 02:31:35 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 02:31:35 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 02:31:35 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 02:31:35 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 02:31:35 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 02:31:35 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 02:31:35 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 02:31:35 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 02:32:23 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 02:32:23 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 02:32:23 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 02:32:24 | INFO     | Gráficos generados exitosamente
+2025-04-06 02:32:24 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 02:32:24 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 02:32:24 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 02:32:24 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 02:32:24 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 02:32:24 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 02:32:24 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 02:32:24 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 02:48:21 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 02:48:21 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 02:48:21 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 02:48:22 | INFO     | Gráficos generados exitosamente
+2025-04-06 02:48:22 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 02:48:23 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 02:48:23 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 02:48:24 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 02:48:25 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 02:48:25 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 02:48:26 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 02:48:26 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 03:11:34 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 03:11:34 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 03:11:34 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 03:11:35 | INFO     | Gráficos generados exitosamente
+2025-04-06 03:11:36 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 03:11:36 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 03:11:37 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 03:11:37 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 03:11:38 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 03:11:39 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 03:11:39 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 03:11:39 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 03:13:55 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 03:13:55 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 03:13:55 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 03:13:56 | INFO     | Gráficos generados exitosamente
+2025-04-06 03:13:57 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 03:13:57 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 03:13:58 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 03:13:59 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 03:13:59 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 03:14:00 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 03:14:01 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 03:14:01 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 03:17:04 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 03:17:04 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 03:17:04 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 03:17:05 | INFO     | Gráficos generados exitosamente
+2025-04-06 03:17:06 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 03:17:06 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 03:17:07 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 03:17:08 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 03:17:08 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 03:17:09 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 03:17:10 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 03:17:10 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 03:18:01 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 03:18:01 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 03:18:01 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 03:18:02 | INFO     | Gráficos generados exitosamente
+2025-04-06 03:18:02 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 03:18:03 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 03:18:03 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 03:18:04 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 03:18:05 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 03:18:05 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 03:18:06 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 03:18:06 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 03:19:59 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 03:19:59 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 03:19:59 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 03:20:00 | INFO     | Gráficos generados exitosamente
+2025-04-06 03:20:01 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 03:20:02 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 03:20:02 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 03:20:03 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 03:20:03 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 03:20:04 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 03:20:05 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 03:20:05 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 03:27:27 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 03:27:27 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 03:27:27 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 03:27:28 | INFO     | Gráficos generados exitosamente
+2025-04-06 03:27:29 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 03:27:29 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 03:27:30 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 03:27:31 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 03:27:31 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 03:27:32 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 03:27:33 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 03:27:33 | INFO     | ==== PROCESO COMPLETADO ====
