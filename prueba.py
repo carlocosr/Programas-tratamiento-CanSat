@@ -32,7 +32,9 @@ COLUMNAS_ESPERADAS = [
 def configurar_logging():
     """Configura el sistema de registro de eventos profesional"""
     
+    # Creamos el objeto logger
     logger = logging.getLogger('cansat')
+    # Establecemos el nivel de logging (debug, info, warning, error, critical)
     logger.setLevel(logging.DEBUG)
 
     # Formato profesional con colores (Windows compatible)
@@ -43,7 +45,9 @@ def configurar_logging():
 
     # Handler para consola
     console_handler = logging.StreamHandler()
+    # Establecemos el nivel de logging para la consola
     console_handler.setLevel(logging.INFO)
+    # Le damos formato al logger
     console_handler.setFormatter(formatter)
 
     # Archivo rotativo (1 MB por archivo, 3 backups)
@@ -53,9 +57,12 @@ def configurar_logging():
         backupCount=3,
         encoding='utf-8'
     )
+    # Establecemos el nivel de logging para el archivo
     file_handler.setLevel(logging.DEBUG)
+    # Le damos formato al logger
     file_handler.setFormatter(formatter)
 
+    # Añadimos los handlers al logger
     logger.addHandler(console_handler)
     logger.addHandler(file_handler)
     
@@ -108,8 +115,8 @@ def cargar_datos(file_path: str) -> pd.DataFrame:
         conversiones = {
             'Index': ('int', 0),
             'Altitude': ('float', 0.0),
-            'Pressure': ('float', 1013.25),
-            'Temperature': ('float', 15.0),
+            'Pressure': ('float', 1013.25), #defecto 1013.25 mbar (presión atmosférica a nivel del mar)
+            'Temperature': ('float', 15.0), #defecto 15.0 C (temperatura ambiente)
             'GPS_Lat': ('float', 0.0),
             'GPS_Lon': ('float', 0.0)
         }
@@ -156,15 +163,31 @@ def generar_graficas_interactivas(df: pd.DataFrame) -> dict:
     try:
         # Gráfico 1: Altitud y presión
         fig1 = make_subplots(specs=[[{"secondary_y": True}]])
-        fig1.add_trace(px.line(df, x='Index', y='Altitude').data[0], secondary_y=False)
-        fig1.add_trace(px.line(df, x='Index', y='Pressure', color_discrete_sequence=['red']).data[0], secondary_y=True)
+
+        # Asegurarse de que las trazas tengan nombres para la leyenda
+        trace_altitude = px.line(df, x='Index', y='Altitude').data[0]
+        trace_altitude.update(name='Altitud')
+
+        trace_pressure = px.line(df, x='Index', y='Pressure', color_discrete_sequence=['red']).data[0]
+        trace_pressure.update(name='Presión')
+
+        # Añadir las trazas
+        fig1.add_trace(trace_altitude, secondary_y=False)
+        fig1.add_trace(trace_pressure, secondary_y=True)
+
+        # Actualizar el diseño, asegurándose de que la leyenda sea visible
         fig1.update_layout(
             title='Dual Axis: Altitud y Presión vs Tiempo',
             xaxis_title='Índice de Muestreo',
             yaxis_title='Altitud (m)',
+            yaxis=dict(color='blue'),  # Cambiar color del eje Y
             yaxis2_title='Presión (hPa)',
+            yaxis2=dict(color='red'),  # Cambiar color del eje Y2
             hovermode='x unified',
+            showlegend=True,  # Hacer la leyenda visible
         )
+
+        # Guardar la figura
         figuras['altitud_presion'] = fig1
 
         # Gráfico 2: Trayectoria 3D
@@ -182,19 +205,19 @@ def generar_graficas_interactivas(df: pd.DataFrame) -> dict:
         )
 
         # Acelerómetro X
-        trace_accx = px.line(df, x='Index', y='AccX', labels={'x': 'Tiempo (índice)', 'y': 'Aceleración X (m/s²)'}).data[0]
+        trace_accx = px.line(df, x='Index', y='AccX').data[0]
         fig3.add_trace(trace_accx, row=1, col=1)
 
         # Acelerómetro Y
-        trace_accy = px.line(df, x='Index', y='AccY', labels={'x': 'Tiempo (índice)', 'y': 'Aceleración Y (m/s²)'}).data[0]
+        trace_accy = px.line(df, x='Index', y='AccY').data[0]
         fig3.add_trace(trace_accy, row=1, col=2)
 
         # Acelerómetro Z
-        trace_accz = px.line(df, x='Index', y='AccZ', labels={'x': 'Tiempo (índice)', 'y': 'Aceleración Z (m/s²)'}).data[0]
+        trace_accz = px.line(df, x='Index', y='AccZ').data[0]
         fig3.add_trace(trace_accz, row=2, col=1)
 
         # Histograma de Temperatura
-        trace_temp = px.histogram(df, x='Temperature', nbins=20, labels={'x': 'Temperatura (°C)', 'y': 'Frecuencia'}).data[0]
+        trace_temp = px.histogram(df, x='Temperature', nbins=20).data[0]
         fig3.add_trace(trace_temp, row=2, col=2)
 
         # Ajustes de diseño y explicación
@@ -202,11 +225,24 @@ def generar_graficas_interactivas(df: pd.DataFrame) -> dict:
             title_text='Panel de Diagnóstico de Sensores',
             height=800,
             showlegend=False,
-            #color titles
             font=dict(size=12, color="#a40000"),
         )
 
+        # Establecer los títulos de los ejes
+        fig3.update_xaxes(title_text="Tiempo (índice)", row=1, col=1)
+        fig3.update_yaxes(title_text="Aceleración (m/s²)", row=1, col=1)
+
+        fig3.update_xaxes(title_text="Tiempo (índice)", row=1, col=2)
+        fig3.update_yaxes(title_text="Aceleración (m/s²)", row=1, col=2)
+
+        fig3.update_xaxes(title_text="Tiempo (índice)", row=2, col=1)
+        fig3.update_yaxes(title_text="Aceleración (m/s²)", row=2, col=1)
+
+        fig3.update_xaxes(title_text="Temperatura (°C)", row=2, col=2)
+        fig3.update_yaxes(title_text="Frecuencia", row=2, col=2)
+
         figuras['panel_sensores'] = fig3
+
 
 
         # Gráfico 4: Matriz de correlación
@@ -228,17 +264,19 @@ def generar_graficas_interactivas(df: pd.DataFrame) -> dict:
             margin=dict(t=150),  # aumentar espacio superior
         )
 
+
         figuras['matriz_correlacion'] = fig4
 
 
         # Gráfico 5: Diagramas de dispersión
-        fig5a = px.scatter(df, x='Altitude', y='Pressure', trendline='ols', title="Altitud vs Presión")
-        fig5b = px.scatter(df, x='Altitude', y='Temperature', trendline='ols', title="Altitud vs Temperatura")
-        fig5c = px.scatter(df, x='Temperature', y='Pressure', trendline='ols', title="Temperatura vs Presión")
+        fig5a = px.scatter(df, x='Altitude', y='Pressure', trendline='ols', trendline_color_override='red', title="Altitud vs Presión", trendline_scope='overall')
+        fig5b = px.scatter(df, x='Altitude', y='Temperature', trendline='ols', trendline_color_override='red', title="Altitud vs Temperatura", trendline_scope='overall')
+        fig5c = px.scatter(df, x='Temperature', y='Pressure', trendline='ols', trendline_color_override='red', title="Temperatura vs Presión", trendline_scope='overall')
 
         figuras['scatter_altitud_presion'] = fig5a
         figuras['scatter_altitud_temp'] = fig5b
         figuras['scatter_temp_presion'] = fig5c
+
 
         logger.info("Gráficos generados exitosamente")
         return figuras
