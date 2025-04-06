@@ -164,19 +164,6 @@ def generar_graficas_interactivas(df: pd.DataFrame) -> dict:
             yaxis_title='Altitud (m)',
             yaxis2_title='Presión (hPa)',
             hovermode='x unified',
-            annotations=[
-                dict(
-                    x=0.5,
-                    y=1.05,
-                    xref='paper',
-                    yref='paper',
-                    text='Este gráfico muestra la relación entre la altitud y la presión durante el vuelo. ' +
-                         'Se observa cómo la altitud aumenta a medida que el CanSat asciende y cómo la presión disminuye a medida que aumenta la altitud.',
-                    showarrow=False,
-                    font=dict(size=12, color="black"),
-                    align="center"
-                )
-            ]
         )
         figuras['altitud_presion'] = fig1
 
@@ -185,123 +172,70 @@ def generar_graficas_interactivas(df: pd.DataFrame) -> dict:
                              hover_data=['Pressure', 'Time'],
                              title='Trayectoria 3D del Vuelo',
                              labels={'GPS_Lon': 'Longitud', 'GPS_Lat': 'Latitud', 'Altitude': 'Altitud (m)', 'Temperature': 'Temp (°C)'})
-        fig2.update_layout(
-            annotations=[
-                dict(
-                    x=0.5,
-                    y=1.05,
-                    xref='paper',
-                    yref='paper',
-                    text='La trayectoria 3D muestra el recorrido del CanSat durante el vuelo. ' +
-                         'Cada punto en el gráfico representa la posición geográfica del CanSat junto con su altitud y temperatura en ese momento.',
-                    showarrow=False,
-                    font=dict(size=12, color="black"),
-                    align="center"
-                )
-            ]
-        )
         figuras['trayectoria_3d'] = fig2
 
         # Gráfico 3: Panel sensores
-        fig3 = make_subplots(rows=2, cols=2,
-                             subplot_titles=('Acelerómetro X', 'Acelerómetro Y', 'Acelerómetro Z', 'Distribución de Temperaturas'))
-        for i, col in enumerate(['AccX', 'AccY', 'AccZ'], 1):
-            fig3.add_trace(px.line(df, x='Index', y=col).data[0], row=(i//2)+1, col=(i%2)+1)
-        fig3.add_trace(px.histogram(df, x='Temperature', nbins=20).data[0], row=2, col=2)
+        fig3 = make_subplots(
+            rows=2,
+            cols=2,
+            subplot_titles=('Acelerómetro X', 'Acelerómetro Y', 'Acelerómetro Z', 'Distribución de Temperaturas')
+        )
+
+        # Acelerómetro X
+        trace_accx = px.line(df, x='Index', y='AccX', labels={'x': 'Tiempo (índice)', 'y': 'Aceleración X (m/s²)'}).data[0]
+        fig3.add_trace(trace_accx, row=1, col=1)
+
+        # Acelerómetro Y
+        trace_accy = px.line(df, x='Index', y='AccY', labels={'x': 'Tiempo (índice)', 'y': 'Aceleración Y (m/s²)'}).data[0]
+        fig3.add_trace(trace_accy, row=1, col=2)
+
+        # Acelerómetro Z
+        trace_accz = px.line(df, x='Index', y='AccZ', labels={'x': 'Tiempo (índice)', 'y': 'Aceleración Z (m/s²)'}).data[0]
+        fig3.add_trace(trace_accz, row=2, col=1)
+
+        # Histograma de Temperatura
+        trace_temp = px.histogram(df, x='Temperature', nbins=20, labels={'x': 'Temperatura (°C)', 'y': 'Frecuencia'}).data[0]
+        fig3.add_trace(trace_temp, row=2, col=2)
+
+        # Ajustes de diseño y explicación
         fig3.update_layout(
             title_text='Panel de Diagnóstico de Sensores',
             height=800,
             showlegend=False,
-            annotations=[
-                dict(
-                    x=0.5,
-                    y=1.05,
-                    xref='paper',
-                    yref='paper',
-                    text='Este panel muestra la lectura de tres acelerómetros en los ejes X, Y, Z, ' +
-                         'además de la distribución de las temperaturas registradas durante el vuelo. ' +
-                         'Cada acelerómetro mide la aceleración en uno de los ejes espaciales.',
-                    showarrow=False,
-                    font=dict(size=12, color="black"),
-                    align="center"
-                )
-            ]
+            #color titles
+            font=dict(size=12, color="#a40000"),
         )
+
         figuras['panel_sensores'] = fig3
+
 
         # Gráfico 4: Matriz de correlación
         variables = ['Temperature', 'Pressure', 'Altitude', 'AccX', 'AccY', 'AccZ', 'GyroX', 'GyroY', 'GyroZ', 'GPS_Lat', 'GPS_Lon']
+
         corr_matrix = df[variables].corr()
-        fig4 = px.imshow(corr_matrix,
-                         text_auto=True,
-                         color_continuous_scale='RdBu',
-                         title="Matriz de Correlación de Variables Clave")
-        fig4.update_layout(
-            annotations=[
-                dict(
-                    x=0.5,
-                    y=1.05,
-                    xref='paper',
-                    yref='paper',
-                    text='La matriz de correlación muestra cómo las diferentes variables del CanSat se relacionan entre sí. ' +
-                         'Valores cercanos a +1 o -1 indican una relación fuerte, mientras que valores cercanos a 0 indican una relación débil o nula.',
-                    showarrow=False,
-                    font=dict(size=12, color="black"),
-                    align="center"
-                )
-            ]
+
+        fig4 = px.imshow(
+            corr_matrix,
+            text_auto=True,
+            color_continuous_scale='RdBu',
+            labels=dict(color="Coef. de correlación")
         )
+
+        # Añadir etiquetas claras en los ejes y ajustar el diseño
+        fig4.update_layout(
+            xaxis_title="Variables",
+            yaxis_title="Variables",
+            margin=dict(t=150),  # aumentar espacio superior
+        )
+
         figuras['matriz_correlacion'] = fig4
+
 
         # Gráfico 5: Diagramas de dispersión
         fig5a = px.scatter(df, x='Altitude', y='Pressure', trendline='ols', title="Altitud vs Presión")
         fig5b = px.scatter(df, x='Altitude', y='Temperature', trendline='ols', title="Altitud vs Temperatura")
         fig5c = px.scatter(df, x='Temperature', y='Pressure', trendline='ols', title="Temperatura vs Presión")
-        fig5a.update_layout(
-            annotations=[
-                dict(
-                    x=0.5,
-                    y=1.05,
-                    xref='paper',
-                    yref='paper',
-                    text='Este gráfico muestra la relación entre la altitud y la presión. ' +
-                         'Se puede observar cómo la presión disminuye conforme aumenta la altitud.',
-                    showarrow=False,
-                    font=dict(size=12, color="black"),
-                    align="center"
-                )
-            ]
-        )
-        fig5b.update_layout(
-            annotations=[
-                dict(
-                    x=0.5,
-                    y=1.05,
-                    xref='paper',
-                    yref='paper',
-                    text='Este gráfico muestra la relación entre la altitud y la temperatura. ' +
-                         'A medida que el CanSat asciende, la temperatura puede variar de acuerdo con la altitud.',
-                    showarrow=False,
-                    font=dict(size=12, color="black"),
-                    align="center"
-                )
-            ]
-        )
-        fig5c.update_layout(
-            annotations=[
-                dict(
-                    x=0.5,
-                    y=1.05,
-                    xref='paper',
-                    yref='paper',
-                    text='Este gráfico muestra cómo la temperatura y la presión están relacionadas. ' +
-                         'Generalmente, la temperatura y la presión se afectan entre sí, con cambios notables a diferentes altitudes.',
-                    showarrow=False,
-                    font=dict(size=12, color="black"),
-                    align="center"
-                )
-            ]
-        )
+
         figuras['scatter_altitud_presion'] = fig5a
         figuras['scatter_altitud_temp'] = fig5b
         figuras['scatter_temp_presion'] = fig5c
@@ -313,20 +247,30 @@ def generar_graficas_interactivas(df: pd.DataFrame) -> dict:
         logger.error(f"Error generando gráficos: {str(e)}", exc_info=True)
         raise
 
-
 # ======================
 # Módulo de añadir logotipo
 # ======================
-def insertar_encabezado_logo(html_path: str, logo_svg: str, nombre_equipo: str):
+def insertar_encabezado_logo(html_path: str, logo_svg: str, nombre_equipo: str, titulo_grafico: str = "", descripcion: str = ""):
     """
-    Inserta un encabezado con logotipo SVG y el nombre del equipo al principio del HTML generado.
+    Inserta un encabezado con logotipo, nombre del equipo, título y descripción opcional.
     """
     with open(html_path, 'r', encoding='utf-8') as f:
         contenido = f.read()
-
+ 
     encabezado = f"""
-    <header style="display:flex;align-items:center;border-bottom:2px solid #ccc;padding-bottom:10px;margin-bottom:20px;align-content: center;justify-content: center;">
-        <img src="{logo_svg}" alt="Logo {nombre_equipo}" style="height:80px;margin-right:20px;">
+    <header style="display:flex;align-items:center;border-bottom:2px solid #ccc;padding:20px;margin-bottom:20px;">
+        <!-- Contenedor del logo -->
+        <div style="flex-shrink: 0; margin-right: 20px;">
+            <img src="{logo_svg}" alt="Logo {nombre_equipo}" style="height:80px;">
+        </div>
+        
+        <!-- Contenedor del título y descripción -->
+        <div style="max-width:80%;">
+            <h2 style="margin:0;font-size:1.4em;text-align:left;color: a40000;">{titulo_grafico}</h2>
+            <p style="margin-top:10px;line-height:1.4em;text-align:left;">
+                {descripcion}
+            </p>
+        </div>
     </header>
     """
 
@@ -335,7 +279,7 @@ def insertar_encabezado_logo(html_path: str, logo_svg: str, nombre_equipo: str):
     with open(html_path, 'w', encoding='utf-8') as f:
         f.write(contenido_modificado)
 
-    print(f"✅ Logotipo y encabezado insertados en {html_path}")
+    print(f"✅ Encabezado insertado en {html_path}")
 
 
 # ========================================
@@ -439,7 +383,52 @@ def main():
     """Punto de entrada principal del programa"""
     
     logger = configurar_logging()
+    titulos = {
+    "grafico_temperatura_altura": "Evolución de Temperatura y Altura",
+    "trayectoria_3d": "Trayectoria 3D del Vuelo y temperatura",
+    "panel_sensores": "Panel de Diagnóstico de Sensores",
+    "matriz_correlacion": "Matriz de Correlación entre Variables",
+    "altitud_presion": "Altitud y Presión vs Paquete",
+    "scatter_altitud_presion": "Altitud vs Presión",
+    "scatter_altitud_temp": "Altitud vs Temperatura",
+    "scatter_temp_presion": "Temperatura vs Presión",
     
+    }
+    descripciones = {
+    "altitud_presion": (
+        "Este gráfico muestra la relación entre la altitud y la presión durante el vuelo. "
+        "Se observa cómo la altitud aumenta a medida que el CanSat asciende y cómo la presión disminuye a medida que aumenta la altitud."
+    ),
+    "trayectoria_3d": (
+        "La trayectoria 3D muestra el recorrido del CanSat durante el vuelo. "
+        "Cada punto en el gráfico representa la posición geográfica del CanSat junto con su altitud y temperatura en ese momento."
+    ),
+    "matriz_correlacion": (
+        "Esta matriz muestra cómo se relacionan las distintas variables físicas registradas por el CanSat. "
+        "Valores cercanos a +1 (rojo) indican correlación positiva fuerte, valores cercanos a -1 (azul) indican correlación negativa fuerte, "
+        "y valores cercanos a 0 (blanco) indican que no hay relación lineal."
+    ),
+    "panel_sensores": (
+        "Este panel muestra cómo varía la aceleración en los ejes X, Y y Z del CanSat a lo largo del tiempo, "
+        "así como la distribución de las temperaturas registradas durante el vuelo. "
+        "Los acelerómetros permiten analizar el movimiento y la orientación del satélite."
+    ),
+    "altitud_tiempo": (
+        "Representación de la altitud del CanSat a lo largo del tiempo. Muestra claramente las fases de ascenso, caída y aterrizaje."
+    ),
+    "scatter_altitud_presion": (
+        "Este gráfico muestra la relación entre la altitud y la presión. "
+        "Se puede observar cómo la presión disminuye conforme aumenta la altitud."
+    ),
+    "scatter_altitud_temp": (
+        "Este gráfico muestra la relación entre la altitud y la temperatura. "
+        "A medida que el CanSat asciende, la temperatura puede variar de acuerdo con la altitud."
+    ),
+    "scatter_temp_presion": (
+        "Este gráfico muestra cómo la temperatura y la presión están relacionadas. "
+        "Generalmente, la temperatura y la presión se afectan entre sí, con cambios notables a diferentes altitudes."
+    ),
+}
     try:
         logger.info("==== INICIO DEL PROCESO ====")
         
@@ -455,11 +444,14 @@ def main():
         
         for nombre, figura in figuras.items():
             ruta_html = f"graficos/{nombre}.html"
+            figura.update_layout(title=None)  # Elimina título interno si molesta
             figura.write_html(ruta_html)
             insertar_encabezado_logo(
                 html_path=ruta_html,
                 logo_svg="JADA CANSAT TEAM.svg",
-                nombre_equipo="JADA CanSat Team"
+                nombre_equipo="JADA CanSat Team",
+                titulo_grafico=titulos.get(nombre, ""),
+                descripcion=descripciones.get(nombre, "")
             )
             logger.info(f"Gráfico guardado: {ruta_html}")
         

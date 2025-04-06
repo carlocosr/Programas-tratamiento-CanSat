@@ -1977,3 +1977,341 @@ title_text
 2025-04-06 15:50:49 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
 2025-04-06 15:50:50 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
 2025-04-06 15:50:50 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 16:01:31 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 16:01:31 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 16:01:31 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 16:01:33 | INFO     | Gráficos generados exitosamente
+2025-04-06 16:01:33 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 16:01:34 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 16:01:34 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 16:01:35 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 16:01:36 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 16:01:36 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 16:01:37 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 16:01:37 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 16:02:43 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 16:02:43 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 16:02:43 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 16:02:44 | INFO     | Gráficos generados exitosamente
+2025-04-06 16:02:45 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 16:02:45 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 16:02:46 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 16:02:46 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 16:02:47 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 16:02:48 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 16:02:48 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 16:02:48 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 16:05:37 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 16:05:37 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 16:05:37 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 16:05:38 | INFO     | Gráficos generados exitosamente
+2025-04-06 16:05:39 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 16:05:40 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 16:05:40 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 16:05:41 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 16:05:41 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 16:05:42 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 16:05:43 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 16:05:43 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 16:06:33 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 16:06:33 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 16:06:33 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 16:06:34 | INFO     | Gráficos generados exitosamente
+2025-04-06 16:06:34 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 16:06:35 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 16:06:36 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 16:06:36 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 16:06:37 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 16:06:37 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 16:06:38 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 16:06:38 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 16:08:21 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 16:08:21 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 16:08:21 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 16:08:22 | INFO     | Gráficos generados exitosamente
+2025-04-06 16:08:23 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 16:08:24 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 16:08:24 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 16:08:25 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 16:08:25 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 16:08:26 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 16:08:27 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 16:08:27 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 16:09:59 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 16:09:59 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 16:09:59 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 16:10:00 | INFO     | Gráficos generados exitosamente
+2025-04-06 16:10:01 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 16:10:01 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 16:10:02 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 16:10:03 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 16:10:03 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 16:10:04 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 16:10:04 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 16:10:04 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 16:30:50 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 16:30:50 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 16:30:50 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 16:30:52 | INFO     | Gráficos generados exitosamente
+2025-04-06 16:30:52 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 16:30:53 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 16:30:53 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 16:30:54 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 16:30:55 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 16:30:55 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 16:30:56 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 16:30:56 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 16:36:07 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 16:36:07 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 16:36:07 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 16:36:08 | INFO     | Gráficos generados exitosamente
+2025-04-06 16:36:09 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 16:36:09 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 16:36:10 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 16:36:11 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 16:36:11 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 16:36:12 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 16:36:12 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 16:36:12 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 16:36:53 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 16:36:53 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 16:36:54 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 16:36:55 | INFO     | Gráficos generados exitosamente
+2025-04-06 16:36:55 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 16:36:56 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 16:36:56 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 16:36:57 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 16:36:58 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 16:36:58 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 16:36:59 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 16:36:59 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 16:41:34 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 16:41:34 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 16:41:34 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 16:41:36 | INFO     | Gráficos generados exitosamente
+2025-04-06 16:42:52 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 16:42:52 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 16:42:52 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 16:42:53 | INFO     | Gráficos generados exitosamente
+2025-04-06 16:42:54 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 16:42:54 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 16:42:55 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 16:42:56 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 16:42:56 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 16:42:57 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 16:42:57 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 16:42:57 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 16:43:14 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 16:43:14 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 16:43:14 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 16:43:16 | INFO     | Gráficos generados exitosamente
+2025-04-06 17:13:44 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 17:13:44 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 17:13:44 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 17:13:46 | INFO     | Gráficos generados exitosamente
+2025-04-06 17:14:31 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 17:14:49 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 17:17:50 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 17:17:50 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 17:17:50 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 17:17:51 | INFO     | Gráficos generados exitosamente
+2025-04-06 17:17:52 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 17:17:52 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 17:17:53 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 17:17:53 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 17:17:54 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 17:17:55 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 17:17:55 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 17:17:55 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 17:18:32 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 17:18:32 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 17:18:32 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 17:18:34 | INFO     | Gráficos generados exitosamente
+2025-04-06 17:18:34 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 17:18:35 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 17:18:35 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 17:18:36 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 17:18:36 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 17:18:37 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 17:18:38 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 17:18:38 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 17:19:59 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 17:19:59 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 17:19:59 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 17:20:00 | INFO     | Gráficos generados exitosamente
+2025-04-06 17:20:00 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 17:20:01 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 17:20:02 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 17:20:02 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 17:20:03 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 17:20:03 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 17:20:04 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 17:20:04 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 17:21:02 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 17:21:02 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 17:21:02 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 17:21:03 | INFO     | Gráficos generados exitosamente
+2025-04-06 17:21:04 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 17:21:05 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 17:21:05 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 17:21:06 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 17:21:06 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 17:21:07 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 17:21:08 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 17:21:08 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 17:21:29 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 17:21:29 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 17:21:29 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 17:21:30 | INFO     | Gráficos generados exitosamente
+2025-04-06 17:21:30 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 17:21:31 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 17:21:32 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 17:21:32 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 17:21:33 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 17:21:33 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 17:21:34 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 17:21:34 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 17:32:22 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 17:32:22 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 17:32:22 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 17:32:24 | INFO     | Gráficos generados exitosamente
+2025-04-06 17:32:24 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 17:32:25 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 17:32:25 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 17:32:26 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 17:32:27 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 17:32:27 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 17:32:28 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 17:32:28 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 17:34:04 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 17:34:04 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 17:34:04 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 17:34:05 | INFO     | Gráficos generados exitosamente
+2025-04-06 17:34:06 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 17:34:06 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 17:34:07 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 17:34:08 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 17:34:08 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 17:34:09 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 17:34:09 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 17:34:09 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 17:41:11 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 17:41:11 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 17:41:11 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 17:41:13 | INFO     | Gráficos generados exitosamente
+2025-04-06 17:41:13 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 17:41:14 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 17:41:14 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 17:41:15 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 17:41:16 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 17:41:16 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 17:41:17 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 17:41:17 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 17:44:03 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 17:44:03 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 17:44:03 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 17:44:05 | INFO     | Gráficos generados exitosamente
+2025-04-06 17:44:05 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 17:44:06 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 17:44:06 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 17:44:07 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 17:44:08 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 17:44:08 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 17:44:09 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 17:44:09 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 17:46:21 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 17:46:21 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 17:46:21 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 17:46:22 | INFO     | Gráficos generados exitosamente
+2025-04-06 17:46:22 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 17:46:23 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 17:46:24 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 17:46:24 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 17:46:25 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 17:46:26 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 17:46:26 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 17:46:26 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 17:50:41 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 17:50:41 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 17:50:41 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 17:50:42 | INFO     | Gráficos generados exitosamente
+2025-04-06 17:50:42 | CRITICAL | Error no controlado: cannot access local variable 'contenido' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Carlos\Documents\GitHub\Programas tratamiento CanSat\prueba.py", line 455, in main
+    insertar_encabezado_logo(
+  File "c:\Users\Carlos\Documents\GitHub\Programas tratamiento CanSat\prueba.py", line 259, in insertar_encabezado_logo
+    contenido_modificado = contenido.replace("<head>", f"<head>\n{favicon_link}")
+                           ^^^^^^^^^
+UnboundLocalError: cannot access local variable 'contenido' where it is not associated with a value
+2025-04-06 17:53:47 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 17:53:47 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 17:53:47 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 17:53:50 | INFO     | Gráficos generados exitosamente
+2025-04-06 17:54:42 | CRITICAL | Error no controlado: cannot access local variable 'contenido' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\Carlos\Documents\GitHub\Programas tratamiento CanSat\prueba.py", line 455, in main
+    insertar_encabezado_logo(
+  File "C:\Users\Carlos\Documents\GitHub\Programas tratamiento CanSat\prueba.py", line 259, in insertar_encabezado_logo
+    contenido_modificado = contenido.replace("<head>", f"<head>\n{favicon_link}")
+                           ^^^^^^^^^
+UnboundLocalError: cannot access local variable 'contenido' where it is not associated with a value
+2025-04-06 17:55:27 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 17:55:27 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 17:55:27 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 17:55:28 | INFO     | Gráficos generados exitosamente
+2025-04-06 17:55:29 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 17:55:29 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 17:55:30 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 17:55:30 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 17:55:31 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 17:55:32 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 17:55:32 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 17:55:32 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 17:56:49 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 17:56:49 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 17:56:49 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 17:56:50 | INFO     | Gráficos generados exitosamente
+2025-04-06 17:56:51 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 17:56:51 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 17:56:52 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 17:56:52 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 17:56:53 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 17:56:54 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 17:56:54 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 17:56:54 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 17:58:12 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 17:58:12 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 17:58:12 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 17:58:13 | INFO     | Gráficos generados exitosamente
+2025-04-06 17:58:13 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 17:58:14 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 17:58:14 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 17:58:15 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 17:58:16 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 17:58:16 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 17:58:17 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 17:58:17 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 17:59:30 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 17:59:30 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 17:59:30 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 17:59:31 | INFO     | Gráficos generados exitosamente
+2025-04-06 17:59:32 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 17:59:32 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 17:59:33 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 17:59:33 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 17:59:34 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 17:59:35 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 17:59:35 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 17:59:35 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-06 18:03:07 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-06 18:03:07 | INFO     | Cargando datos desde: datos.csv
+2025-04-06 18:03:07 | INFO     | Datos cargados correctamente. Muestras: 1297
+2025-04-06 18:03:09 | INFO     | Gráficos generados exitosamente
+2025-04-06 18:03:09 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-06 18:03:10 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-06 18:03:10 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-06 18:03:11 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-06 18:03:12 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-06 18:03:12 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-06 18:03:13 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-06 18:03:13 | INFO     | ==== PROCESO COMPLETADO ====
