@@ -445,7 +445,7 @@ def main():
         
         # 1. Carga de datos
         df = cargar_datos('datos.csv')
-        archivo_kml = "ruta_cansat.kml"
+        archivo_kml = "graficos/ruta_cansat.kml"
         
         # 2. Generación de gráficos
         figuras = generar_graficas_interactivas(df)
