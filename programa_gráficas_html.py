@@ -25,6 +25,7 @@ COLUMNAS_ESPERADAS = [
     "AccX", "AccY", "AccZ", "GyroX", "GyroY", "GyroZ",
     "GPS_Lat", "GPS_Lon", "Date", "Time"
 ]
+archivo = "datos.txt"
 
 # ======================
 # Configuración de logging
@@ -419,7 +420,6 @@ def leer_datos_csv(archivo_csv):
 
 def main():
     """Punto de entrada principal del programa"""
-    
     logger = configurar_logging()
     titulos = {
     "grafico_temperatura_altura": "Evolución de Temperatura y Altura",
@@ -471,7 +471,7 @@ def main():
         logger.info("==== INICIO DEL PROCESO ====")
         
         # 1. Carga de datos
-        df = cargar_datos('datos.csv')
+        df = cargar_datos(archivo)
         archivo_kml = "graficos/ruta_cansat.kml"
         
         # 2. Generación de gráficos
@@ -494,7 +494,7 @@ def main():
             logger.info(f"Gráfico guardado: {ruta_html}")
         
         # Generación KML
-        datos_gps = leer_datos_csv('datos.csv')
+        datos_gps = leer_datos_csv(archivo)
         crear_kml_mejorado(datos_gps, archivo_kml)
         print(f"KML generado exitosamente: {archivo_kml}")
 

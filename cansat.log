@@ -8276,3 +8276,47 @@ AttributeError: 'str' object has no attribute 'keys'
 2025-04-07 00:54:18 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
 2025-04-07 00:54:18 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
 2025-04-07 00:54:18 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-07 18:46:43 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-07 18:46:43 | ERROR    | Error cargando datos: Archivo no encontrado: datos.csv
+Traceback (most recent call last):
+  File "c:\Users\Carlos\Documents\GitHub\Programas tratamiento CanSat\programa_gráficas_html.py", line 95, in cargar_datos
+    raise FileNotFoundError(f"Archivo no encontrado: {file_path}")
+FileNotFoundError: Archivo no encontrado: datos.csv
+2025-04-07 18:46:43 | ERROR    | Error crítico: Archivo no encontrado: datos.csv
+2025-04-07 18:48:18 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-07 18:48:18 | INFO     | Cargando datos desde: datos.txt
+2025-04-07 18:48:18 | WARNING  | Formato de tiempo no válido, usando valores crudos
+2025-04-07 18:48:18 | INFO     | Datos cargados correctamente. Muestras: 3793
+2025-04-07 18:48:29 | INFO     | Gráficos generados exitosamente
+2025-04-07 18:48:30 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-07 18:48:31 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-07 18:48:31 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-07 18:48:32 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-07 18:48:33 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-07 18:48:33 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-07 18:48:34 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-07 18:48:34 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-07 18:51:00 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-07 18:51:00 | INFO     | Cargando datos desde: datos.txt
+2025-04-07 18:51:00 | INFO     | Datos cargados correctamente. Muestras: 336
+2025-04-07 18:51:02 | INFO     | Gráficos generados exitosamente
+2025-04-07 18:51:03 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-07 18:51:03 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-07 18:51:04 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-07 18:51:04 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-07 18:51:05 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-07 18:51:06 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-07 18:51:06 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-07 18:51:06 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-07 21:36:30 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-07 21:36:30 | INFO     | Cargando datos desde: datos.txt
+2025-04-07 21:36:30 | INFO     | Datos cargados correctamente. Muestras: 336
+2025-04-07 21:36:31 | INFO     | Gráficos generados exitosamente
+2025-04-07 21:36:32 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-07 21:36:32 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-07 21:36:33 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-07 21:36:33 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-07 21:36:34 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-07 21:36:35 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-07 21:36:35 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-07 21:36:35 | INFO     | ==== PROCESO COMPLETADO ====
