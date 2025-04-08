@@ -8320,3 +8320,55 @@ FileNotFoundError: Archivo no encontrado: datos.csv
 2025-04-07 21:36:35 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
 2025-04-07 21:36:35 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
 2025-04-07 21:36:35 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-08 01:05:11 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-08 01:05:11 | INFO     | Cargando datos desde: datos.txt
+2025-04-08 01:05:11 | INFO     | Datos cargados correctamente. Muestras: 336
+2025-04-08 01:05:14 | ERROR    | Error generando gráficos: No module named 'statsmodels'
+Traceback (most recent call last):
+  File "c:\Users\JADA CanSat Team\Documents\Visual Studio\Programas-tratamiento-CanSat\programa_gráficas_html.py", line 273, in generar_graficas_interactivas
+    fig5a = px.scatter(df, x='Altitude', y='Pressure', trendline='ols', trendline_color_override='red', title="Altitud vs Presión", trendline_scope='overall')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JADA CanSat Team\AppData\Roaming\Python\Python311\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JADA CanSat Team\AppData\Roaming\Python\Python311\site-packages\plotly\express\_core.py", line 2773, in make_figure
+    patch, fit_results = make_trace_kwargs(
+                         ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JADA CanSat Team\AppData\Roaming\Python\Python311\site-packages\plotly\express\_core.py", line 430, in make_trace_kwargs
+    y_out, hover_header, fit_results = trendline_function(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JADA CanSat Team\AppData\Roaming\Python\Python311\site-packages\plotly\express\trendline_functions\__init__.py", line 42, in ols
+    import statsmodels.api as sm
+ModuleNotFoundError: No module named 'statsmodels'
+2025-04-08 01:05:14 | CRITICAL | Error no controlado: No module named 'statsmodels'
+Traceback (most recent call last):
+  File "c:\Users\JADA CanSat Team\Documents\Visual Studio\Programas-tratamiento-CanSat\programa_gráficas_html.py", line 478, in main
+    figuras = generar_graficas_interactivas(df)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\JADA CanSat Team\Documents\Visual Studio\Programas-tratamiento-CanSat\programa_gráficas_html.py", line 273, in generar_graficas_interactivas
+    fig5a = px.scatter(df, x='Altitude', y='Pressure', trendline='ols', trendline_color_override='red', title="Altitud vs Presión", trendline_scope='overall')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JADA CanSat Team\AppData\Roaming\Python\Python311\site-packages\plotly\express\_chart_types.py", line 69, in scatter
+    return make_figure(args=locals(), constructor=go.Scatter)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JADA CanSat Team\AppData\Roaming\Python\Python311\site-packages\plotly\express\_core.py", line 2773, in make_figure
+    patch, fit_results = make_trace_kwargs(
+                         ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JADA CanSat Team\AppData\Roaming\Python\Python311\site-packages\plotly\express\_core.py", line 430, in make_trace_kwargs
+    y_out, hover_header, fit_results = trendline_function(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JADA CanSat Team\AppData\Roaming\Python\Python311\site-packages\plotly\express\trendline_functions\__init__.py", line 42, in ols
+    import statsmodels.api as sm
+ModuleNotFoundError: No module named 'statsmodels'
+2025-04-08 01:08:07 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-08 01:08:07 | INFO     | Cargando datos desde: datos.txt
+2025-04-08 01:08:07 | INFO     | Datos cargados correctamente. Muestras: 336
+2025-04-08 01:08:21 | INFO     | Gráficos generados exitosamente
+2025-04-08 01:08:24 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-08 01:08:26 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-08 01:08:27 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-08 01:08:29 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-08 01:08:30 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-08 01:08:32 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-08 01:08:33 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-08 01:08:33 | INFO     | ==== PROCESO COMPLETADO ====
