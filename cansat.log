@@ -8372,3 +8372,113 @@ ModuleNotFoundError: No module named 'statsmodels'
 2025-04-08 01:08:32 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
 2025-04-08 01:08:33 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
 2025-04-08 01:08:33 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-09 01:21:15 | INFO     | ==== INICIO DEL PROCESO (DATOS RECEPTOR) ====
+2025-04-09 01:21:15 | INFO     | Cargando datos desde: datos_receptor.csv
+2025-04-09 01:21:15 | INFO     | Datos cargados correctamente. Muestras: 3011
+2025-04-09 01:21:28 | INFO     | Gráficos generados exitosamente
+2025-04-09 01:21:29 | INFO     | Gráfico guardado: graficos/altitud_presion_receptor.html
+2025-04-09 01:21:29 | INFO     | Gráfico guardado: graficos/trayectoria_3d_receptor.html
+2025-04-09 01:21:30 | INFO     | Gráfico guardado: graficos/panel_sensores_receptor.html
+2025-04-09 01:21:30 | INFO     | Gráfico guardado: graficos/matriz_correlacion_receptor.html
+2025-04-09 01:21:31 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion_receptor.html
+2025-04-09 01:21:32 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp_receptor.html
+2025-04-09 01:21:32 | INFO     | Gráfico guardado: graficos/scatter_temp_presion_receptor.html
+2025-04-09 01:21:33 | INFO     | Gráfico guardado: graficos/temperatura_tiempo_receptor.html
+2025-04-09 01:21:33 | INFO     | ==== PROCESO COMPLETADO (DATOS RECEPTOR) ====
+2025-04-09 01:27:02 | INFO     | ==== INICIO DEL PROCESO (DATOS RECEPTOR) ====
+2025-04-09 01:27:02 | INFO     | Cargando datos desde: datos_receptor.csv
+2025-04-09 01:27:02 | INFO     | Datos cargados correctamente. Muestras: 3011
+2025-04-09 01:32:20 | INFO     | ==== INICIO DEL PROCESO (DATOS RECEPTOR) ====
+2025-04-09 01:32:20 | INFO     | Cargando datos desde: datos_receptor.csv
+2025-04-09 01:32:20 | INFO     | Datos cargados correctamente. Muestras: 387
+2025-04-09 01:32:22 | INFO     | Gráficos generados exitosamente
+2025-04-09 01:32:22 | INFO     | Gráfico guardado: graficos/altitud_presion_receptor.html
+2025-04-09 01:32:23 | INFO     | Gráfico guardado: graficos/trayectoria_3d_receptor.html
+2025-04-09 01:32:24 | INFO     | Gráfico guardado: graficos/panel_sensores_receptor.html
+2025-04-09 01:32:24 | INFO     | Gráfico guardado: graficos/matriz_correlacion_receptor.html
+2025-04-09 01:32:25 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion_receptor.html
+2025-04-09 01:32:25 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp_receptor.html
+2025-04-09 01:32:26 | INFO     | Gráfico guardado: graficos/scatter_temp_presion_receptor.html
+2025-04-09 01:32:27 | INFO     | Gráfico guardado: graficos/temperatura_tiempo_receptor.html
+2025-04-09 01:32:27 | INFO     | ==== PROCESO COMPLETADO (DATOS RECEPTOR) ====
+2025-04-09 01:34:46 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-09 01:34:46 | INFO     | Cargando datos desde: datos_emisor.csv
+2025-04-09 01:34:46 | INFO     | Datos cargados correctamente. Muestras: 3011
+2025-04-09 01:34:48 | INFO     | Gráficos generados exitosamente
+2025-04-09 01:34:48 | INFO     | Gráfico guardado: graficos/altitud_presion.html
+2025-04-09 01:34:49 | INFO     | Gráfico guardado: graficos/trayectoria_3d.html
+2025-04-09 01:34:50 | INFO     | Gráfico guardado: graficos/panel_sensores.html
+2025-04-09 01:34:50 | INFO     | Gráfico guardado: graficos/matriz_correlacion.html
+2025-04-09 01:34:51 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion.html
+2025-04-09 01:34:51 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp.html
+2025-04-09 01:34:52 | INFO     | Gráfico guardado: graficos/scatter_temp_presion.html
+2025-04-09 01:34:52 | INFO     | ==== PROCESO COMPLETADO ====
+2025-04-09 01:34:54 | INFO     | ==== INICIO DEL PROCESO (DATOS RECEPTOR) ====
+2025-04-09 01:34:54 | INFO     | Cargando datos desde: datos_receptor.csv
+2025-04-09 01:34:54 | INFO     | Datos cargados correctamente. Muestras: 387
+2025-04-09 01:34:55 | INFO     | Gráficos generados exitosamente
+2025-04-09 01:34:56 | INFO     | Gráfico guardado: graficos/altitud_presion_receptor.html
+2025-04-09 01:34:57 | INFO     | Gráfico guardado: graficos/trayectoria_3d_receptor.html
+2025-04-09 01:34:57 | INFO     | Gráfico guardado: graficos/panel_sensores_receptor.html
+2025-04-09 01:34:58 | INFO     | Gráfico guardado: graficos/matriz_correlacion_receptor.html
+2025-04-09 01:34:58 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion_receptor.html
+2025-04-09 01:34:59 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp_receptor.html
+2025-04-09 01:35:00 | INFO     | Gráfico guardado: graficos/scatter_temp_presion_receptor.html
+2025-04-09 01:35:00 | INFO     | Gráfico guardado: graficos/temperatura_tiempo_receptor.html
+2025-04-09 01:35:00 | INFO     | ==== PROCESO COMPLETADO (DATOS RECEPTOR) ====
+2025-04-09 01:40:12 | INFO     | ==== INICIO DEL PROCESO (DATOS RECEPTOR) ====
+2025-04-09 01:40:12 | INFO     | Cargando datos desde: datos_receptor.csv
+2025-04-09 01:40:12 | INFO     | Datos cargados correctamente. Muestras: 387
+2025-04-09 01:40:12 | ERROR    | Error generando gráficos: name 'np' is not defined
+Traceback (most recent call last):
+  File "c:\Users\Carlos\Documents\GitHub\Programas tratamiento CanSat\programa_gráficas_SD_receptor.py", line 239, in generar_graficas_interactivas
+    mask = np.triu(np.ones_like(corr_matrix, dtype=bool))
+           ^^
+NameError: name 'np' is not defined
+2025-04-09 01:40:12 | CRITICAL | Error no controlado: name 'np' is not defined
+Traceback (most recent call last):
+  File "c:\Users\Carlos\Documents\GitHub\Programas tratamiento CanSat\programa_gráficas_SD_receptor.py", line 480, in main
+    figuras = generar_graficas_interactivas(df)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Carlos\Documents\GitHub\Programas tratamiento CanSat\programa_gráficas_SD_receptor.py", line 239, in generar_graficas_interactivas
+    mask = np.triu(np.ones_like(corr_matrix, dtype=bool))
+           ^^
+NameError: name 'np' is not defined
+2025-04-09 01:40:46 | INFO     | ==== INICIO DEL PROCESO (DATOS RECEPTOR) ====
+2025-04-09 01:40:46 | INFO     | Cargando datos desde: datos_receptor.csv
+2025-04-09 01:40:46 | INFO     | Datos cargados correctamente. Muestras: 387
+2025-04-09 01:40:47 | INFO     | Gráficos generados exitosamente
+2025-04-09 01:40:48 | INFO     | Gráfico guardado: graficos/altitud_presion_receptor.html
+2025-04-09 01:40:48 | INFO     | Gráfico guardado: graficos/trayectoria_3d_receptor.html
+2025-04-09 01:40:49 | INFO     | Gráfico guardado: graficos/panel_sensores_receptor.html
+2025-04-09 01:40:49 | INFO     | Gráfico guardado: graficos/matriz_correlacion_receptor.html
+2025-04-09 01:40:50 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion_receptor.html
+2025-04-09 01:40:51 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp_receptor.html
+2025-04-09 01:40:51 | INFO     | Gráfico guardado: graficos/scatter_temp_presion_receptor.html
+2025-04-09 01:40:52 | INFO     | Gráfico guardado: graficos/temperatura_tiempo_receptor.html
+2025-04-09 01:40:52 | INFO     | ==== PROCESO COMPLETADO (DATOS RECEPTOR) ====
+2025-04-09 01:42:11 | INFO     | ==== INICIO DEL PROCESO (DATOS RECEPTOR) ====
+2025-04-09 01:42:11 | INFO     | Cargando datos desde: datos_receptor.csv
+2025-04-09 01:42:11 | INFO     | Datos cargados correctamente. Muestras: 387
+2025-04-09 01:42:12 | INFO     | Gráficos generados exitosamente
+2025-04-09 01:42:13 | INFO     | Gráfico guardado: graficos/altitud_presion_receptor.html
+2025-04-09 01:42:14 | INFO     | Gráfico guardado: graficos/trayectoria_3d_receptor.html
+2025-04-09 01:42:14 | INFO     | Gráfico guardado: graficos/panel_sensores_receptor.html
+2025-04-09 01:42:15 | INFO     | Gráfico guardado: graficos/matriz_correlacion_receptor.html
+2025-04-09 01:42:15 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion_receptor.html
+2025-04-09 01:42:16 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp_receptor.html
+2025-04-09 01:42:17 | INFO     | Gráfico guardado: graficos/scatter_temp_presion_receptor.html
+2025-04-09 01:42:17 | INFO     | Gráfico guardado: graficos/temperatura_tiempo_receptor.html
+2025-04-09 01:42:17 | INFO     | ==== PROCESO COMPLETADO (DATOS RECEPTOR) ====
+2025-04-09 01:44:00 | INFO     | ==== INICIO DEL PROCESO ====
+2025-04-09 01:44:00 | INFO     | Cargando datos desde: datos_emisor.csv
+2025-04-09 01:44:00 | INFO     | Datos cargados correctamente. Muestras: 3011
+2025-04-09 01:44:02 | INFO     | Gráficos generados exitosamente
+2025-04-09 01:44:02 | INFO     | Gráfico guardado: graficos/altitud_presion_emisor.html
+2025-04-09 01:44:03 | INFO     | Gráfico guardado: graficos/trayectoria_3d_emisor.html
+2025-04-09 01:44:03 | INFO     | Gráfico guardado: graficos/panel_sensores_emisor.html
+2025-04-09 01:44:04 | INFO     | Gráfico guardado: graficos/matriz_correlacion_emisor.html
+2025-04-09 01:44:05 | INFO     | Gráfico guardado: graficos/scatter_altitud_presion_emisor.html
+2025-04-09 01:44:05 | INFO     | Gráfico guardado: graficos/scatter_altitud_temp_emisor.html
+2025-04-09 01:44:06 | INFO     | Gráfico guardado: graficos/scatter_temp_presion_emisor.html
+2025-04-09 01:44:06 | INFO     | ==== PROCESO COMPLETADO ====
